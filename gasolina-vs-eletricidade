@@ -1,0 +1,11 @@
+import input from 'readline-sync';
+
+console.log('Conversor de gasolina: \n');
+let valor_gasolina = input.question ('Qual o valor do litro de gasolina: ');
+let km_litro = input.question ('Quantos km sua moto faz por litro: ');
+let km_dia = input.question ('Quantos km você faz por dia: ');
+let rotina = input.question ('Quantos dias no mês: ')
+
+let gasolina_mensal = (((km_dia/km_litro)*valor_gasolina)*rotina);
+let eletrica = ((km_dia*0.05)*rotina);
+console.log('Você gasta R$ ' +gasolina_mensal+' reais com gasolina, com ums moto elétrica você gastaria apenas R$ '+eletrica+'reais');
